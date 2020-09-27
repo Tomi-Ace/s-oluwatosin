@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #1e1e64;
+    --secondary-color: #8b8cb2;
+}
+
+/**base styles **/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.7em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+}
+
+h1, h2, h3 {
+    line-height: 2em;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/**all containers**/
+.nav-container, .about-container, .interest-container, .connect-container, 
+.contact-container, .form-control {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.background-text {
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 3px;
+    opacity: 0.1;
+    margin-top: 1rem;
+}
+
+/**nav bar icon **/
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+.navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.navbar .nav-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-container .nav {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav a {
+    padding: 0 1em;
+}
+
+.navbar .nav a:hover {
+    color: var(--secondary-color);
+}
+
+.about-me {
+    margin: 2rem 0;
+}
+
+.about-me .about-container, .interests .interest-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    color: var(--primary-color);
+    padding: 8px 5px;  
+}
+
+.circ {
+    border: 1px solid var(--primary-color);
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.butt {
+    padding: 8px 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    margin-right: 7px;
+}
+
+.butt:hover {
+    background-color: var(--secondary-color);
+}
+
+.passion {
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+.interest-container p {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.interest-container img {
+    position: absolute;
+    width: 45%;
+    top: 0;
+    right: 0;
+}
+
+.connect-container {
+    margin-top: 2rem;
+    padding-top: 2rem;  
+    padding-bottom: 3rem;
+}
+
+.contact-container h1 {
+    text-align: center;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    
+}
+
+.contact-container i {
+    color: var(--primary-color);
+    background-color: white;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 60%;
+}
+
+.contact-container p {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+textarea, input {
+    border: 2px solid var(--primary-color);
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: inherit;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px;
+    font-size: 14px;
+    width: 346px;
+}
+
+
+@media(max-width: 768px) {
+    .navbar .nav-container, .nav{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 80%;
+        height: 100vh;
+    }
+
+    .menu-btn {
+        display: block;
+        right: 50px;
+    }
+
+    .nav-container ul.nav {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        top: 0;
+        transform: translateX(-600px);
+        transition: transform 0.4s ease-in-out;
+        margin-left: -20px;
+        align-items: flex-start;
+        
+    }
+
+    .nav-container ul.nav.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-container ul.nav li {
+        padding: 10px;
+        
+        font-size: 24px;
+    }
+
+    .menu-btn:hover {
+        opacity: 0.4;
+    }
+    .about-me .about-container, .interests .interest-container {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-container img {
+        position: relative;
+        width: 100%;
+    }
+
+    textarea, input {
+        width: 300px;
+    }
+    
+}
+
