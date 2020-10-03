@@ -83,9 +83,15 @@ img {
     display: none;
 }
 
+.menu-btn i {
+    color: white;
+}
+
 .navbar {
+    background-color: var(--primary-color);
+    color: white;
     padding-top: 1.5rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
 }
 
 .navbar .nav-container {
@@ -102,6 +108,7 @@ img {
 
 .navbar .nav a {
     padding: 0 1em;
+    color: white;
 }
 
 .navbar .nav a:hover {
@@ -215,25 +222,25 @@ input {
         display: block;
         position: absolute;
         z-index: 2;
-        width: 80%;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
     }
 
     .menu-btn {
         display: block;
         right: 50px;
+        z-index: 3;
     }
 
     .nav-container ul.nav {
         display: flex;
         flex-direction: column;
-        background: white;
+        background: var(--primary-color);
         top: 0;
-        transform: translateX(-600px);
-        transition: transform 0.4s ease-in-out;
-        margin-left: -20px;
+        left: 20px;
+        transform: translateX(-800px);
+        transition: transform 0.6s ease-in-out;
         align-items: flex-start;
-        
     }
 
     .nav-container ul.nav.show {
@@ -241,14 +248,19 @@ input {
     }
 
     .nav-container ul.nav li {
-        padding: 10px;
-        
+        padding: 10px; 
         font-size: 24px;
     }
 
     .menu-btn:hover {
         opacity: 0.4;
     }
+
+    .navbar {
+        padding-top: 1.6rem;
+        padding-bottom: 4rem;
+    }
+    
     .about-me .about-container, .interests .interest-container, .skills .skills-container {
         grid-template-columns: 1fr;
     }
