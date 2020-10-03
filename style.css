@@ -41,14 +41,31 @@ img {
 }
 
 /**all containers**/
-.nav-container, .about-container, .interest-container, .connect-container, 
-.contact-container, .form-control {
+.nav-container, 
+.about-container, 
+.interest-container, 
+.connect-container, 
+.contact-container, 
+.skills-container, 
+.form-control {
     position: relative;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
     padding: 0 2rem;
 }
+
+/*all grids layout*/
+.about-me .about-container,
+.interests .interest-container,
+.skills .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .background-text {
     text-align: center;
@@ -95,14 +112,6 @@ img {
     margin: 2rem 0;
 }
 
-.about-me .about-container, .interests .interest-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
 .social-media {
     color: var(--primary-color);
     padding: 8px 5px;  
@@ -125,6 +134,12 @@ img {
 
 .butt:hover {
     background-color: var(--secondary-color);
+}
+
+.skills-container .web {
+    position: absolute;
+    top: 0;
+    right: 50px;
 }
 
 .passion {
@@ -179,12 +194,12 @@ img {
 }
 
 textarea, input {
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 2px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: inherit;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 14px;
+    padding-left: 14px;
     margin-bottom: 15px;
 }
 
@@ -192,7 +207,7 @@ input {
     display: flex;
     justify-content: space-around;
     padding: 6px;
-    font-size: 14px;
+    font-size: 12px;
     width: 346px;
 }
 
@@ -236,8 +251,13 @@ input {
     .menu-btn:hover {
         opacity: 0.4;
     }
-    .about-me .about-container, .interests .interest-container {
+    .about-me .about-container, .interests .interest-container, .skills .skills-container {
         grid-template-columns: 1fr;
+    }
+
+    .skills-container .web {
+        position: relative;
+        left: 0;
     }
 
     .interest-container img {
