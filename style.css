@@ -14,7 +14,7 @@ body {
     font-size: 16px;
     line-height: 1.7em;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 h1, h2, h3 {
@@ -149,6 +149,10 @@ img {
     right: 50px;
 }
 
+.interests{
+    background-color: whitesmoke;
+}
+
 .passion {
     font-size: 40px;
     padding-bottom: 1rem;
@@ -166,10 +170,17 @@ img {
     right: 0;
 }
 
+.connect{
+    background: #999;
+}
+
 .connect-container {
-    margin-top: 2rem;
     padding-top: 2rem;  
     padding-bottom: 3rem;
+}
+
+.contact-me {
+    padding-bottom: 2em;
 }
 
 .contact-container h1 {
@@ -215,7 +226,6 @@ input {
     padding: 6px;
     width: 350px;
 }
-
 
 @media(max-width: 768px) {
     .navbar .nav-container, .nav{
@@ -268,6 +278,10 @@ input {
     .skills-container .web {
         position: relative;
         left: 0;
+    }
+
+    .interests{
+        padding-bottom: 2em;
     }
 
     .interest-container img {
