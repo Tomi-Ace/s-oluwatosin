@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1e1e64;
-    --secondary-color: #8b8cb2;
+    --primary-color: black;
+    --secondary-color: #455;
 }
 
 /**base styles **/
@@ -41,12 +41,7 @@ img {
 }
 
 /**all containers**/
-.nav-container, 
-.about-container, 
-.interest-container, 
-.connect-container, 
-.contact-container, 
-.skills-container, 
+.container,
 .form-control {
     position: relative;
     max-width: 1000px;
@@ -66,13 +61,16 @@ img {
     justify-content: center;
 }
 
-
 .background-text {
     text-align: center;
     font-size: 70px;
     letter-spacing: 3px;
     opacity: 0.1;
     margin-top: 1rem;
+}
+
+.logo a {
+    color: white;
 }
 
 /**nav bar icon **/
@@ -171,7 +169,13 @@ img {
 }
 
 .connect{
-    background: #999;
+    background: var(--primary-color);
+    color: white;
+}
+
+.connect .circ {
+    color: white;
+    border: 1px solid white;
 }
 
 .connect-container {
@@ -295,4 +299,3 @@ input {
     }
     
 }
-
