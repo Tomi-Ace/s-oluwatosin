@@ -225,6 +225,10 @@ textarea, input {
     margin-bottom: 15px;
 }
 
+textarea:focus, input:focus {
+    outline: none;
+}
+
 input {
     display: flex;
     padding: 6px;
@@ -275,10 +279,23 @@ input {
         padding-bottom: 4rem;
     }
     
-    .about-me .about-container, .interests .interest-container, .skills .skills-container {
+    .about-me .about-container, 
+    .interests .interest-container, 
+    .skills .skills-container {
         grid-template-columns: 1fr;
     }
 
+    .background-text {
+        animation: slideInFromLeft 1.2s ease-in;
+    }
+    
+    .about-text, 
+    .about-container img,
+    .skills-container,
+    .interest-container {
+        animation: slideInFromBottom 1s ease-in;
+    }
+    
     .skills-container .web {
         position: relative;
         left: 0;
@@ -296,6 +313,27 @@ input {
     textarea, input {
         width: 300px;
         line-height: inherit;
+    }
+
+    /*Animations*/
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
     }
     
 }
